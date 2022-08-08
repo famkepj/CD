@@ -1,9 +1,9 @@
-name: Run tests
+name: Run tests & deploy
 
 on: push
 jobs:  
   run-tests:
-    run-on: ubuntu-latest
+    run-on: ubuntu-20.04
     steps:
       - name: Checkout repository
         uses: actions/chekout@v2
