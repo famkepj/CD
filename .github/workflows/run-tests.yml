@@ -3,7 +3,7 @@ name: Run tests & deploy
 on: push
 jobs:  
   run-tests:
-    run-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/chekout@v2
