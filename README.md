@@ -1,2 +1,1 @@
-Hier kan ik de badge nog plaatsen als alle tests oké zijn
-# Continious_Deployment
+[![Run tests](https://github.com/famkepj/Continious_Deployment/actions/workflows/run-tests.yml/badge.svg)](https://github.com/famkepj/Continious_Deployment/actions/workflows/run-tests.yml)
