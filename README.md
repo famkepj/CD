@@ -1,1 +1,1 @@
-[![Run tests](https://github.com/famkepj/Continious_Deployment/actions/workflows/run-tests.yml/badge.svg)](https://github.com/famkepj/Continious_Deployment/actions/workflows/run-tests.yml)
+[![Run tests & deploy](https://github.com/famkepj/CD/actions/workflows/run-tests.yml/badge.svg)](https://github.com/famkepj/CD/actions/workflows/run-tests.yml)

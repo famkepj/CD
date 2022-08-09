@@ -14,9 +14,6 @@ def joke():
 def answer():
 	return 'An investgator!'
 
-def power(x,y):
-	return x**y
-
 with app.test_request_context():
 	print(url_for('index'))
 	print(url_for('joke'))
