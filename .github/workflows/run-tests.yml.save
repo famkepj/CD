@@ -4,7 +4,7 @@ on: push
 
 env:
   secrets_private_key: ${{ secrets.SHH_PRIVATE_KEY }}
-  secrets_host: ssh-keyscan -H ${{ secrets.SSH_HOST }}
+  secrets_host: ssh-keyscan -H  ${{ secrets.SSH_HOST }}
 #  secrets_user: ${{ secrets.SSH_USER }}
 #  secrets_port: ${{ secrets.SSH_PORT }}
 
@@ -32,7 +32,8 @@ jobs:
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
           key: secrets_private_key
       - name: Adding Know Hosts
-        run: secrets_host  >> ~/.ssh/known_hosts
+        run: ssh-keyscan secrets_host  >> ~/.ssh/known_hosts
+
       - name: Deploy with digitalocean
         run: rsync -avz ./Continuous_Deployment/ secrets_user@secrets_host:/home/cd
 
