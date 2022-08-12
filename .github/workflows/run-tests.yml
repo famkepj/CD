@@ -4,7 +4,7 @@ on: push
 
 env:
   secrets_private_key: ${{ secrets.SHH_PRIVATE_KEY }}
-  secrets_host: ssh-keyscan -H ${{ secrets.SSH_HOST }}
+  secrets_host: ssh-keyscan ${{ secrets.SSH_HOST }}
 #  secrets_user: ${{ secrets.SSH_USER }}
 #  secrets_port: ${{ secrets.SSH_PORT }}
 
