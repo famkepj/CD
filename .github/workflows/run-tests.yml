@@ -4,7 +4,7 @@ on: push
 
 env:
   secrets_private_key: ${{ secrets.SHH_PRIVATE_KEY }}
-  secrets_host: ssh-keyscan ${{ secrets.SSH_HOST }}
+  secrets_host: ${{ secrets.SSH_HOST }}
 #  secrets_user: ${{ secrets.SSH_USER }}
 #  secrets_port: ${{ secrets.SSH_PORT }}
 
@@ -35,4 +35,5 @@ jobs:
         run: secrets_host  >> ~/.ssh/known_hosts
       - name: Deploy with digitalocean
         run: rsync -avz ./Continuous_Deployment/ secrets_user@secrets_host:/home/cd
+
 
