@@ -32,7 +32,7 @@ jobs:
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
           key: secrets_private_key
       - name: Adding Know Hosts
-        run: ssh-keyscan -p 22 104.248.81.86  >> ~/.ssh/known_hosts
+        run: ssh-keyscan -p 22 -h ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
       - name: Deploy with digitalocean
         run: rsync -avz ./Continuous_Deployment/ secrets_user@secrets_host:/home/cd
 
