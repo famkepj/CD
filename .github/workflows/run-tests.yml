@@ -24,7 +24,8 @@ jobs:
         run: pytest
   deploy:
     needs: run-tests
-    runs-on: ubuntu-latest    steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
