@@ -36,9 +36,9 @@ jobs:
       - name: Deploy with digitalocean
         uses: appleboy/ssh-action@v0.1.2
         with:
-          secrets_host
-          secrets_private_key
-          secrets_user
+          host: secrets_host
+          key: secrets_private_key
+          user: secrets_user
 
           script: |
             mkdir test
