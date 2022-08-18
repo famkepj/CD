@@ -34,7 +34,8 @@ jobs:
       - name: Adding Know Hosts
         run: ssh-keyscan -H 104.248.81.86  >> ~/.ssh/known_hosts
       - name: Deploy with digitalocean
-        uses: appleboy/ssh-action@v0.1.2
+        #uses: appleboy/ssh-action@v0.1.2
+        uses: appleboy/ssh-action@master
         with:
           host: 104.248.81.86
           key: secrets_private_key
