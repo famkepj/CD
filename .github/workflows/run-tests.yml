@@ -37,7 +37,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.2
         with:
           host: 104.248.81.86
-          key: ${{ secrets.SHH_PRIVATE_KEY }}
+          key: secrets_private_key
           username: root
 
           script: |
