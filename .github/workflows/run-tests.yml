@@ -34,6 +34,17 @@ jobs:
       - name: Adding Know Hosts
         run: ssh-keyscan -H 104.248.81.86  >> ~/.ssh/known_hosts
       - name: Deploy with digitalocean
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          secrets_host
+          secrets_private_key
+          secrets_user
+
+          script: | 
+            mkdir test
+            cd test
+            git clone git@github.com:famkepj/CD.git
+            echo 'Deployment succesful to digital ocean'
         #run: rsync -avz ./Continuous_Deployment/ secrets_user@secrets_host:/home/cd
-        run: rsync -avz -e "ssh -p secrets_port" ./dist/ secrets_user@secrets_host:/var/www/famkepj.com/
+        #run: rsync -avz -e "ssh -p secrets_port" ./dist/ secrets_user@secrets_host:/var/www/famkepj.com/
 
