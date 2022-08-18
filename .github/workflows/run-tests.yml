@@ -33,7 +33,7 @@ jobs:
           key: secrets_private_key
       - name: Adding Know Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts      
-     - name: Deploy with digitalocean
+      - name: Deploy with digitalocean
         run: rsync -avz ./Continuous_Deployment/ secrets_user@secrets_host:/home/cd
 
 
