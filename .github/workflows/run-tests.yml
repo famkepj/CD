@@ -31,9 +31,9 @@ jobs:
         with:
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
           key: -----BEGIN OPENSSH PRIVATE KEY-----
-          b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
-          NhAAAAAwEAAQAAAgEA21Ijn9p2H3rNKHcSFyEgEr5uH58rCEjlfO8dy7PNUIAt9SC8ORdA
-          OslYszjTPfcTncJL97Asd9jZCMPsuOBlCijPFVhKhWSoqCi/FFJRii+rhzWx9wnA3/IeHN
+               b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
+               NhAAAAAwEAAQAAAgEA21Ijn9p2H3rNKHcSFyEgEr5uH58rCEjlfO8dy7PNUIAt9SC8ORdA
+               OslYszjTPfcTncJL97Asd9jZCMPsuOBlCijPFVhKhWSoqCi/FFJRii+rhzWx9wnA3/IeHN
           MvzpYJMhjCOmnMaKw6R/H+64MhwayOetkGtVx04vSaoc3RinM88UvZ5pIrg5y1/yWDxHvg
           51kBFPcCcxBjMJ4K4yue/J/DVDDkYFP+tlS5ggw7V34o4oNFwH3e/zB4oc5Nkdnp66r0aU
           IU/X015dLceobko+kEfPkKVZNkKqdwncT6bzguXqOX8r+e8nKsEa0CC0S3VcsfiR1Va+MP
