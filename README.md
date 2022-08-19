@@ -21,23 +21,23 @@ env:
 
 - Problem: 	- From August 13, 2021, GitHub is no longer accepting account passwords when authenticating Git operations. You need to add a PAT (Personal Access Token) instead
 - Solution: 	- Create personal acces token on Github & put this in windows credentials
-######  Create Personal Access Token on GitHub
-From your GitHub account, go to 
-	- => Settings 
-	- => Developer Settings 
-	- => Personal Access Token 
-	- => Generate New Token (Give your password) 
-	- => Fillup the form 
-	- => click Generate token 
-	- => Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+	- ######  Create Personal Access Token on GitHub
+	  From your GitHub account, go to 
+ 	  - => Settings 
+	  - => Developer Settings 
+	  - => Personal Access Token 
+	  - => Generate New Token (Give your password) 
+	  - => Fillup the form 
+	  - => click Generate token 
+	  - => Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
 
-######  For Windows OS ⤴
-Go to 
-	- => Credential Manager from Control Panel 
-	- => Windows Credentials 
-	- => find git:https://github.com 
-	- => Edit 
-	- => On Password replace with with your GitHub Personal Access Token 
+	- ######  For Windows OS ⤴
+	  Go to 
+	  - => Credential Manager from Control Panel 
+	  - => Windows Credentials 
+	  - => find git:https://github.com 
+	  - => Edit 
+	  - => On Password replace with with your GitHub Personal Access Token 
 
 - Problem:	- Workflow is working but website is still not published on website -> don't know what I am missing
 - Solution:       - Search the internet -> ask for help in slack
