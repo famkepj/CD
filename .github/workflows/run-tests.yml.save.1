@@ -1,0 +1,58 @@
+name: Run tests & deploy
+
+on: push
+
+env:
+  secrets_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+  secrets_host: ${{ secrets.SSH_HOST }}
+  secrets_user: ${{ secrets.SSH_USER }}
+  secrets_port: ${{ secrets.SSH_PORT }}
+  secrets_digitalocean: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.6'
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest
+  deploy:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+          key: secrets_private_key
+      - name: Adding Know Host
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy with digitalocean
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+
+          script: |
+            mkdir deploy
+            cd deploy
+            git clone git@github.com:famkepj/CD.git
+            echo 'deployment succesful to digital ocean'
+      # - name: Install doctl
+      #  uses: digitalocean/action-doctl@v2
+       # with:
+        #  token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+        #export TOKEN = ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+
+
