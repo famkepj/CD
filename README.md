@@ -8,8 +8,8 @@
 - DIGITALOCEAN_ACCESS_TOKEN - to acces my digital ocean with github 
 
 2) Discuss three problems that you encountered along the way and how you solved them.
-Problem:	- Github couldn't read the secrets
-Solution:	- Put them in 'env'
+- Problem:	- Github couldn't read the secrets
+- Solution:	- Put them in 'env'
 ```python
 env:
   secrets_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -19,8 +19,8 @@ env:
   secrets_digitalocean: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 ```
 
-Problem: 	- From August 13, 2021, GitHub is no longer accepting account passwords when authenticating Git operations. You need to add a PAT (Personal Access Token) instead
-Solution: 	- Create personal acces token on Github & put this in windows credentials
+- Problem: 	- From August 13, 2021, GitHub is no longer accepting account passwords when authenticating Git operations. You need to add a PAT (Personal Access Token) instead
+- Solution: 	- Create personal acces token on Github & put this in windows credentials
 ### Create Personal Access Token on GitHub
 From your GitHub account, go to 
 - => Settings 
@@ -39,8 +39,8 @@ Go to
 - => Edit 
 - => On Password replace with with your GitHub Personal Access Token 
 
-Problem:	- Workflow is working but website is still not published on website -> don't know what I am missing
-Solution:       - Search the internet -> ask for help in slack
+- Problem:	- Workflow is working but website is still not published on website -> don't know what I am missing
+- Solution:       - Search the internet -> ask for help in slack
 
 
 3) (optional) Anything of note that you want to share about the process of solving this assignment.
